@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GordeyDev — проекты</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0a0d0b;
+    --green: #3ddc84;
+    --text: #e8f2ec;
+    --text-dim: #8aa196;
+    --line: #1c2622;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter', sans-serif;
+  }
+  a{ color:inherit; text-decoration:none; }
+  ::selection{ background:var(--green); color:#04140b; }
+
+  header{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:28px 6vw;
+    border-bottom:1px solid var(--line);
+  }
+  .logo{ font-weight:800; font-size:16px; }
+  .logo span{ color:var(--green); }
+  nav a{
+    font-size:14px;
+    color:var(--text-dim);
+    margin-left:28px;
+  }
+  nav a:hover{ color:var(--green); }
+
+  .hero{
+    padding:120px 6vw 90px;
+    max-width:760px;
+  }
+  h1{
+    font-weight:800;
+    font-size:clamp(34px, 6vw, 56px);
+    line-height:1.15;
+  }
+  h1 span{ color:var(--green); }
+  .hero p{
+    margin-top:20px;
+    color:var(--text-dim);
+    font-size:17px;
+    line-height:1.6;
+    max-width:520px;
+  }
+  .hero-actions{
+    margin-top:34px;
+    display:flex; flex-wrap:wrap; gap:12px;
+  }
+  .btn{
+    font-size:14px;
+    padding:13px 24px;
+    border-radius:6px;
+    border:1px solid var(--line);
+    font-weight:600;
+  }
+  .btn-primary{
+    background:var(--green);
+    color:#04140b;
+    border-color:var(--green);
+  }
+  .btn-primary:hover{ opacity:0.9; }
+  .btn-ghost{ color:var(--text-dim); }
+  .btn-ghost:hover{ color:var(--green); border-color:var(--green); }
+
+  section{
+    padding:80px 6vw;
+    max-width:900px;
+    margin:0 auto;
+    border-top:1px solid var(--line);
+  }
+  .eyebrow{
+    color:var(--green);
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  h2{
+    font-size:clamp(24px, 3.5vw, 32px);
+    font-weight:800;
+    margin-bottom:44px;
+  }
+
+  .project{
+    display:flex; align-items:flex-start; justify-content:space-between;
+    gap:20px;
+    padding:26px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .project:last-child{ border-bottom:none; }
+  .project h3{
+    font-size:19px;
+    font-weight:700;
+    margin-bottom:6px;
+  }
+  .project p{
+    color:var(--text-dim);
+    font-size:14px;
+    line-height:1.6;
+    max-width:420px;
+  }
+  .project-link{
+    flex-shrink:0;
+    font-size:14px;
+    font-weight:600;
+    color:var(--green);
+    padding-top:2px;
+  }
+  .project-soon{
+    flex-shrink:0;
+    font-size:13px;
+    font-weight:600;
+    color:var(--text-dim);
+    border:1px solid var(--line);
+    padding:6px 12px;
+    border-radius:5px;
+  }
+
+  .connect{
+    display:flex; flex-direction:column;
+  }
+  .connect-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:20px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .connect-row:last-child{ border-bottom:none; }
+  .connect-row:hover .row-label{ color:var(--green); }
+  .row-label{
+    font-size:16px;
+    font-weight:600;
+  }
+  .row-desc{
+    color:var(--text-dim);
+    font-size:13px;
+    margin-top:3px;
+  }
+  .row-target{
+    color:var(--text-dim);
+    font-size:14px;
+  }
+
+  footer{
+    padding:40px 6vw;
+    border-top:1px solid var(--line);
+    text-align:center;
+    color:var(--text-dim);
+    font-size:13px;
+  }
+
+  @media (max-width:640px){
+    .project, .connect-row{ flex-direction:column; align-items:flex-start; gap:10px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">gordey<span>dev</span></div>
+  <nav>
+    <a href="#projects">проекты</a>
+    <a href="#connect">контакты</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero" style="border-top:none; max-width:760px; margin:0; padding:120px 6vw 90px;">
+    <h1>GordeyDev<span>.</span></h1>
+    <p>Разработчик и создатель Telegram-ботов и сервисов. Ниже — актуальные проекты и все способы со мной связаться.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="https://t.me/GordeyDev" target="_blank" rel="noopener">написать мне</a>
+      <a class="btn btn-ghost" href="#projects">смотреть проекты</a>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="eyebrow">проекты</div>
+    <h2>Что я делаю</h2>
+
+    <div class="project">
+      <div>
+        <h3>KengiVPN</h3>
+        <p>Бот для быстрого и стабильного VPN-подключения прямо в Telegram.</p>
+      </div>
+      <a class="project-link" href="https://t.me/KengiVPNbot" target="_blank" rel="noopener">t.me/KengiVPNbot →</a>
+    </div>
+
+    <div class="project">
+      <div>
+        <h3>KengiStars</h3>
+        <p>Бот для быстрой и безопасной покупки Telegram Stars по выгодному курсу.</p>
+      </div>
+      <a class="project-link" href="https://t.me/KengiStarsBot" target="_blank" rel="noopener">t.me/KengiStarsBot →</a>
+    </div>
+
+    <div class="project">
+      <div>
+        <h3>Таска</h3>
+        <p>Новый проект в разработке.</p>
+      </div>
+      <span class="project-soon">скоро откроется</span>
+    </div>
+
+  </section>
+
+  <section id="connect">
+    <div class="eyebrow">на связи</div>
+    <h2>Контакты</h2>
+
+    <div class="connect">
+      <a class="connect-row" href="https://t.me/GordeyDev" target="_blank" rel="noopener">
+        <div>
+          <div class="row-label">Личный профиль</div>
+          <div class="row-desc">написать мне напрямую</div>
+        </div>
+        <div class="row-target">t.me/GordeyDev</div>
+      </a>
+
+      <a class="connect-row" href="https://t.me/GordeyDev1" target="_blank" rel="noopener">
+        <div>
+          <div class="row-label">Канал</div>
+          <div class="row-desc">новости и обновления проектов</div>
+        </div>
+        <div class="row-target">t.me/GordeyDev1</div>
+      </a>
+
+      <a class="connect-row" href="https://t.me/+lMMEBUtgudJkMjky" target="_blank" rel="noopener">
+        <div>
+          <div class="row-label">Чат</div>
+          <div class="row-desc">общение с сообществом</div>
+        </div>
+        <div class="row-target">открыть →</div>
+      </a>
+
+      <a class="connect-row" href="https://t.me/GordeyDev1/4" target="_blank" rel="noopener">
+        <div>
+          <div class="row-label">Отзывы</div>
+          <div class="row-desc">что говорят пользователи</div>
+        </div>
+        <div class="row-target">смотреть →</div>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>© 2026 GordeyDev</footer>
+
+</body>
+</html>
+
